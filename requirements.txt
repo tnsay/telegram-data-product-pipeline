@@ -2,3 +2,12 @@ python-dotenv
 psycopg2-binary
 SQLAlchemy
 requests
+telethon
+pandas
+ultralytics
+fastapi
+uvicorn
+pydantic
+dbt-postgres
+dagster
+dagster-webserver

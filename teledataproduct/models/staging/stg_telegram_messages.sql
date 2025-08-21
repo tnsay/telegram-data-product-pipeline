@@ -20,7 +20,12 @@ renamed as (
         end as sender_id,
 
         trim(message)                                      as message_text,
-        coalesce(has_media::boolean, false)                as has_media,
+
+                -- enforce consistency: if no media_path, set has_media = false
+        case 
+            when nullif(media_path, '') is null then false
+            else coalesce(has_media::boolean, true)
+        end                                                as has_media,
         nullif(media_path, '')                             as media_path,
         length(trim(message))                              as message_length
     from raw_messages

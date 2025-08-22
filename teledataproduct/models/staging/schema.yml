@@ -13,3 +13,18 @@ models:
         description: "Telegram channel name"
         tests:
           - not_null
+models:
+  - name: stg_image_detections
+    columns:
+      - name: detection_id
+        tests: [not_null, unique]
+      - name: message_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_telegram_messages')
+              field: message_id
+      - name: detected_object_class
+        tests: [not_null]
+      - name: confidence_score
+        tests: [not_null]

@@ -50,7 +50,7 @@ for date_folder in os.listdir(BASE_DIR):
         continue  # skip non-directories
 
     for channel in os.listdir(date_path):
-        file_path = os.path.join(date_path, channel, "messages.json")
+        file_path = os.path.join(date_path, channel, f"{channel}_messages.json")
 
         if not os.path.exists(file_path):
             print(f"⚠️ Skipping missing file: {file_path}")

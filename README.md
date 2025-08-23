@@ -1,7 +1,7 @@
 # Telegram Data Product Pipeline
 
 ## Introduction
-This project is developed at **Kara Solutions**, a leading data science company.  
+This project is developed at **Kara Solutions**/ for lerning purpose, a leading data science company.  
 Our task is to build a **robust data platform** that generates insights about **Ethiopian medical businesses**, using data scraped from public **Telegram channels**.
 
 The pipeline integrates **scraping, data warehousing, transformations, enrichment with object detection, and an analytical API** to enable business insights.

@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: stg_messages
+    description: "Staging table for Telegram scraped messages"
+    columns:
+      - name: media_path
+        description: "Path to stored media file (if applicable)"
+        tests:
+          - not_null
+          - unique
